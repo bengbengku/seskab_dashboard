@@ -20,16 +20,16 @@ function App() {
         {/* Reset CSS Use CssBaseline */}
         <CssBaseline />
         <div className="app">
-          {user && <Sidebar />}
+          <Sidebar />
           <main className="content">
-            {user && <Topbar />}
+            <Topbar />
             <Routes>
               <Route element={<LoggedInRoutes />}>
-                <Route path="/" element={<Dashboard />} />
-                <Route path="/pegawai" element={<Pegawai />} />
+                <Route path="/signin" element={<SignIn />} />
               </Route>
               <Route element={<NotLoggedInRoutes />}>
-                <Route path="/signin" element={<SignIn />} />
+                <Route path="/" element={<Dashboard />} />
+                <Route path="/pegawai" element={<Pegawai />} />
               </Route>
             </Routes>
           </main>

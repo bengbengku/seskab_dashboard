@@ -134,6 +134,12 @@ const Pegawai = () => {
                 paginationModel: { pageSize: 7, page: 0 },
               },
             }}
+            slotProps={{
+              toolbar: {
+                showQuickFilter: true,
+                quickFilterProps: { debounceMs: 500 },
+              },
+            }}
             pageSizeOptions={[7, 25, 50]}
           />
         )}
